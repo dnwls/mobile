@@ -1,0 +1,916 @@
+:root {
+  --chrome__background-color: white;
+  --chrome-head__bottom-color: white;
+  --chrome-head__circle-color: white;
+  
+  --header-color: white;
+  --main-color: white;
+  --advert-color: white;
+  --info-color: white;
+  --footer-color: white;
+  
+  font-size: 10px;
+  background: white;
+}
+
+::selection {
+  background: white;
+  color: #d8d8d8;
+}
+
+html, body {
+  overflow-x: ;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  min-height: 100vh;
+  font: 1.6rem/1.5 Arial, sans-serif;
+  letter-spacing: -0.05em;
+}
+
+figure {
+  margin: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+video {
+  margin-top: -13px;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ------------------------------------------------
+* 브라우저 디자인 */
+.browser {
+  display: flex;
+  flex-flow: column;
+  flex: 0 0 100vw;
+  /*max-width: calc(1120px + (1.4rem * 2));*/
+  min-width: 240px;
+  min-height: 20vh;
+  border-radius: 0.6rem;
+  background: var(--chrome__background-color);
+}
+
+.browser-body {
+  display: flex;
+  flex: 1 0 50%;
+  /*padding: 1.4rem;*/
+}
+
+.browser-view {
+  flex: 1 0 50%;
+}
+
+/* ------------------------------------------------
+모바일
+*/
+
+.browser-view {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.browser-view > * {
+  display: flex;
+ /* justify-content: center;
+ align-items: center;*/
+ color: #fff;
+}
+
+.header { 
+  height: 10vh;
+  flex: 1 100%;
+}
+
+.banner { 
+  color: #595959;
+  flex: 1 100%;
+  height: 80vh;
+}
+
+.main { 
+  height: 5vh;
+  flex: 1 50%;
+}
+
+.info { 
+  height: 5vh;
+  flex: 1 50%;
+}
+
+.footer { 
+  background: var(--footer-color);
+  flex: 1 100%;
+  height: 10vh;
+}
+
+
+/* 중간 */
+
+@media ( min-width: 50em ) {
+
+  :root {
+    --header-height : 10vh;
+    --footer-height : 10vh;
+    --info-height   : 8vh;
+    --main-height   : calc(100% - (var(--header-height) + var(--footer-height) + var(--info-height)));
+  }
+  
+  .browser-view {
+    flex-direction: row;
+    min-height: 70vh;
+  }
+  
+  .browser-view > * {
+    height: auto;
+  }
+  
+  .header {
+    flex: 1 80%;
+  }
+  
+  .main   { 
+    order: 1;
+    flex: 1 20%;
+  }
+  
+  .banner { 
+    order: 2;
+    flex: 1 100%;
+  }
+  
+  .info { 
+    order: 3;
+    flex: 1 100%;
+  }
+  
+  .footer {
+    order: 4;
+    flex: 1 100%;
+  }
+  
+}
+
+@media ( min-width: 64em ) {  
+  /* index.css*/
+  .browser-view {
+    flex-direction: row;
+    min-height: 70vh;
+  }
+  
+/*  .browser-view > * {
+    height: auto;
+    }*/
+
+    .header {
+      flex: 1 100%;
+      height: 100px;
+      position: relative;
+      color: black;
+      border-bottom: 1px solid black;
+    }
+
+    .header img {
+      display: block;
+    }
+
+    #icon-headset {
+      position: absolute;
+      top: 41px;
+      margin-left: 21.5vw;
+    }
+
+    #phone_number {
+      position: absolute;
+      /*margin-left: 24vw;*/
+      left: 24.5vw;
+      top: 45px;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 11pt;
+      color: rgba(60, 61, 72, 255);
+      letter-spacing: 1px;
+    }
+
+    #main-header {
+      position: absolute !important;
+      top: 20px !important;
+      left: 48vw !important;
+      font-family: ﻿Montserrat-Bold, ﻿AdobeInvisFont, ﻿MyriadPro-Regular !important;
+      font-size: 30pt !important;
+      color: rgba(60, 61, 72, 255) !important;
+      text-align: left !important;
+      letter-spacing: 1px !important;
+    }
+
+    #icon-face {
+      position: absolute;
+      top: 42px;
+      left: 68vw;
+    }
+
+    #login-text {
+      position: absolute;
+      top: 45px;
+      left: 71.5vw;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 11pt;
+      color: rgba(60, 61, 72, 255);
+      letter-spacing: 0.2em;
+    }
+
+    .nav {
+      flex: 1 100%;
+      height: 69px;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    .nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav ul li {
+      float: left;
+    }
+
+    .nav ul li a {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 12pt;
+      color: rgba(60, 61, 72, 255);
+      text-align: left;
+      margin-left: 4vw; 
+      margin-right: 4vw;     
+    }
+
+    .category-details {
+      display: none;
+    }
+
+    .banner { 
+      order: 2;
+      flex: 1 100%;
+      height: 100vh;
+      /*padding-top: 100vh;*/
+    }
+
+    #boxgallert {
+      width: 200%;
+    }
+
+    .main { 
+      display:flex;
+      flex-direction: column;
+      height: 220vh;
+      order: 2;
+      flex: 1 100%;
+      color: black;
+      background-color: white;
+      padding: 0 10% 0 10%;
+    }
+
+    .main-text {
+      text-align: center;
+      color: black;
+      padding: 0;
+      margin-top: 2em;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 15pt;
+      color: rgba(60, 61, 72, 255);
+      font-weight: bold;
+    }
+
+    .top-content {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .top-content span {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      text-align: left;
+      margin-top: 0.5em;
+    }
+
+    .top-content span a {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 11pt;
+      color: rgba(60, 61, 72, 255);
+      text-decoration: underline;
+      letter-spacing: 1/1000rem;
+    }
+
+    .top-content-item {
+      margin-top: 10vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-content-item img {
+      width: 30vw;
+      height: 70vh;
+    }
+
+    .main-go-1 {
+      text-align: center;
+    }  
+
+    .main-go-1 a {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 15pt;
+      color: rgba(60, 61, 72, 255);
+      text-decoration: underline;
+    }
+
+    .main-go-2 {
+      margin-top: 9vh;
+      text-align: center;
+    }
+
+    .main-go-2 {
+      padding-bottom: 3vh;
+      border-bottom: 1px solid #E7E7E7;
+    }
+
+    .main-go-2 a {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 15pt;
+      color: rgba(60, 61, 72, 255);
+      text-decoration: underline;
+    }
+
+    .main-item-list {
+      margin-top: 10vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 15pt;
+      color: rgba(60, 61, 72, 255);
+    }
+
+    .main-item-list div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-item-list div span {
+      text-align: center;
+      margin-bottom: 1vh;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 15pt;
+      color: rgba(60, 61, 72, 255);
+      letter-spacing: 0.5rem;
+    }
+
+    .main-item-list div img {
+      width: 25vw;
+      height: 70vh;
+    }
+
+    .info { 
+      display:none;
+      height: 0;
+      order: 3;
+      flex: 0 0%;
+    }
+
+    .card img {
+      width: 39px;
+      height: 23px;
+      margin-right: 3vw;
+    }
+
+    .copyright {
+      position: absolute;
+      right: 0;
+      margin-right: 10vw;
+      bottom: 8px;
+    }
+
+    .footer-1 {
+      padding-right: 10vw;
+      padding-left: 10vw;
+      background-color: white;
+      bottom:0;
+      order: 5;
+      flex: 1 100%;
+      height: 191px;
+      border-bottom: 1px solid black;
+      padding-bottom: 30vh;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-1 .footer-title {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 11pt;
+      color: rgba(60, 61, 72, 255);
+      font-weight: bold;
+      text-align: left;
+      min-width: 161px; 
+    }
+
+    .footer-1 .footer-phone {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 22pt;
+      font-weight: bold;
+      color: rgba(60, 61, 72, 255);
+      text-align: left;
+    }
+
+    .footer-1 p {
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 12pt;
+      color: rgba(91, 93, 105, 255);
+      text-align: left;
+      margin: 0;
+    }
+
+    .footer-2 {
+      padding-left: 10vw;
+      background-color: white;
+      bottom:0;
+      order: 5;
+      flex: 1 100%;
+      height: 67px;
+      display:flex;
+      align-items: center;
+      position: relative;
+    }
+
+
+    .footer-2 h2 {
+      display: inline-block;
+      margin: 0;
+      font-family: ﻿Montserrat-Bold, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 24pt;
+      color: rgba(60, 61, 72, 255);
+    }
+
+    .footer-2 span {
+      position: relative;
+      top: -2px;
+      margin-left: 2vw;
+      font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+      font-size: 12pt;
+      color: rgba(91, 93, 105, 255);
+    }
+
+  /*---------------------------------------------------
+  men.css
+  */
+  .men {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    order: 2;
+    flex: 1 100%;
+    color: black;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+  }
+
+  .men h2 {
+    font-size: 1.3em;
+    letter-spacing: 0.2rem;
+  }
+
+  .men .men-coat-text-1 {
+    font-size: 0.9em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+  
+  .men .men-coat-text-2 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 0.7em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+
+  .men .men-coat-text-2 a {
+   color: black;
+   text-decoration: underline;
+ }
+
+ .men .men-coat {
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.men .men-coat img {
+  width: 30vw;
+  height: 40vw;
+}
+
+.men .men-sweater-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.men .men-sweater-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.men .men-sweater-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.men .men-sweater {
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.men .men-sweater img {
+  width: 20vw;
+  height: 25vw;
+  border-radius: 5px;
+}
+
+.men .men-padding-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.men .men-padding-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.men .men-padding-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.men .men-padding {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom:5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.men .men-padding img {
+  width: 17vw;
+  height: 17vw;
+}
+  /*---------------------------------------------------
+  women.css
+  */
+  .women {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    order: 2;
+    flex: 1 100%;
+    color: black;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+  }
+
+  .women h2 {
+    font-size: 1.3em;
+    letter-spacing: 0.2rem;
+  }
+
+  .women .women-coat-text-1 {
+    font-size: 0.9em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+  
+  .women .women-coat-text-2 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 0.7em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+
+  .women .women-coat-text-2 a {
+   color: black;
+   text-decoration: underline;
+ }
+
+ .women .women-coat {
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.women .women-coat img {
+  width: 30vw;
+  height: 40vw;
+}
+
+.women .women-sweater-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.women .women-sweater-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.women .women-sweater-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.women .women-sweater {
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.women .women-sweater img {
+  width: 20vw;
+  height: 25vw;
+  border-radius: 5px;
+}
+
+.women .women-padding-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.women .women-padding-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.women .women-padding-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.women .women-padding {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom:5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.women .women-padding img {
+  width: 17vw;
+  height: 17vw;
+}
+
+  /*---------------------------------------------------
+  kids.css
+  */
+  .kids {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    order: 2;
+    flex: 1 100%;
+    color: black;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+  }
+
+  .kids h2 {
+    font-size: 1.3em;
+    letter-spacing: 0.2rem;
+  }
+
+  .kids .kids-coat-text-1 {
+    font-size: 0.9em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+  
+  .kids .kids-coat-text-2 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 0.7em;
+    font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+  }
+
+  .kids .kids-coat-text-2 a {
+   color: black;
+   text-decoration: underline;
+ }
+
+ .kids .kids-coat {
+  display:flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.kids .kids-coat img {
+  width: 25vw;
+  height: 35vw;
+}
+
+.kids-coat-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.kids-coat-column span {
+  margin-top: 1vw;
+  font-size: 0.8em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.kids .kids-sweater-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.kids .kids-sweater-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.kids .kids-sweater-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.kids .kids-sweater {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.kids .kids-sweater img {
+  width: 17vw;
+  height: 20vw;
+}
+
+.kids .kids-padding-text-1 {
+  margin-top: 3vh;
+  font-size: 0.9em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.kids .kids-padding-text-2 {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 0.7em;
+  font-family: ﻿Montserrat-Regular, ﻿AdobeInvisFont, ﻿MyriadPro-Regular;
+}
+
+.kids .kids-padding-text-2 a {
+ color: black;
+ text-decoration: underline;
+}
+
+.kids .kids-padding {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom:5%;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.kids .kids-padding img {
+  width: 17vw;
+  height: 20vw;
+}
+
+.img-wrap img:last-child {
+  display: none;
+}
+
+.img-wrap:hover img:first-child {
+  display: none;
+}
+
+.img-wrap:hover img:last-child {
+  display: inline-block;
+}
+
+
+
+  /*---------------------------------------------------
+  notice.css
+  */
+  .notice {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    order: 2;
+    flex: 1 100%;
+    color: black;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+  }
+
+  .notice table {
+    border-bottom: 1px solid red;
+    width:  100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  .notice th, .notice td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+
+  /*---------------------------------------------------
+  contact.css
+  */
+  .contact {
+    display:flex;
+    /*flex-direction: column;*/
+    height: 50vh;
+    order: 2;
+    flex: 1 100%;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw 0 10vw;
+  }
+
+  .contact h3 {
+    margin: 0;
+    font-size: 15rem;
+  }
+
+  /* 
+  set.css
+  */
+  .top-content img, .main-item-list img, .men img, .women img, .kids img {
+    border-radius: 20px;
+  }
+
+  .nav {
+    overflow: hidden;
+  }
+
+  .sticky {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100vw;
+  }
+
+  .sticky ul li a {
+    color:black;
+      margin-left: 4vw; 
+      margin-right: 4vw; 
+  }
+ /* section {
+    margin-top: 69px;
+  }*/
+
+}
+
+@media ( min-width: 100em ) {
+  /* 1600px 스크린 디자인 */
+}

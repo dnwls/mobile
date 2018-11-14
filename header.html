@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Document</title>
+	<link rel="stylesheet" href="mobile_index1.css">
+	<link rel="stylesheet" type="text/css" href="./mobile_css/component.css" />
+	<link rel="stylesheet" href="./mobile_css/login.css">
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="./mobile_js/jquery.simpleslider.js"></script>
+	<script src="./mobile_js/backstretch.js"></script>
+	<script src="./mobile_js/custom.js"></script>
+</head>
+<body>
+	<script>
+		var loginmodal = document.getElementById('login');
+
+		window.onclick = function(event) {
+			if (event.target == loginmodal) {
+				loginmodal.style.display = "none";
+			}
+		}
+	</script>
+	<div class="browser">
+		<div class="browser-body">
+			<div class="browser-view">
+				<header class="header">
+					<span id="phone_number">041-xxx-xxxx / 010-xxxx-xxxx</span>
+					<h2><a href="mobile_index1.html" id="main-header">Top</a></h2>
+					<img id="icon-face" src="./mobile_img/icons/Icon-face@2x.png" alt="" width="30" height="30">
+					<span><a href="#" id="login-text" onclick="document.getElementById('login').style.display='block'">LOG IN</a></span>
+				</header>
+				<header class="nav" id="navbar">
+					<ul class="nav-category">
+						<li><a href="men.html">MEN</a></li>
+						<li><a href="women.html">WOMEN</a></li>
+						<li><a href="kids.html">KIDS</a></li>
+						<li><a href="notice.html">NOTICE</a></li>
+						<li><a href="event.html">EVENT</a></li>
+					</ul>					
+				</header>
+				<div id="login" class="login-modal">					
+					<form class="modal-content animate" action="/action_page.php">
+						<div class="imgcontainer">
+							<span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+							<img src="img_avatar2.png" alt="Avatar" class="avatar">
+						</div>
+
+						<div class="container">
+							<label for="uname" style="color:black"><b>Username</b></label>
+							<input type="text" placeholder="Enter Username" name="uname" required>
+
+							<label for="psw" style="color:black"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+
+							<button type="submit">Login</button>
+							<label style="color:black">
+								<input type="checkbox" checked="checked" name="remember"> Remember me
+							</label>
+						</div>
+
+						<div class="container" style="background-color:#f1f1f1">
+							<button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+							<!-- <span class="psw">Forgot <a href="#">password?</a></span> -->
+						</div>
+					</form>
+				</div>
